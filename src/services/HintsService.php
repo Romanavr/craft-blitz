@@ -94,13 +94,13 @@ class HintsService extends Component
             return;
         }
 
+        $planHandle = $elementQuery->eagerLoadHandle;
         // Required to support relations saved prior to Craft 5.3.0.
-        if (!ElementQueryHelper::isRelationFieldQuery($elementQuery)) {
+        if (!$planHandle && !ElementQueryHelper::isRelationFieldQuery($elementQuery)) {
             return;
         }
 
         /** @see ElementQuery::wasEagerLoaded() */
-        $planHandle = $elementQuery->eagerLoadHandle;
         if (str_contains($planHandle, ':')) {
             $planHandle = explode(':', $planHandle, 2)[1];
         }
