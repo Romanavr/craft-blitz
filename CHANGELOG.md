@@ -1,5 +1,13 @@
 # Release Notes for Blitz
 
+## 5.12.12 - 2026-07-16 [CRITICAL]
+
+> [!WARNING]
+> Test warning
+> [!CRITICAL]
+> Test critical
+
+
 ## 5.12.11 - 2026-07-16
 
 - Disabled foreign key checks when inserting element caches to help prevent deadlocks when elements are saved ([#903](https://github.com/putyourlightson/craft-blitz/issues/903)).
